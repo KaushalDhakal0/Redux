@@ -67,7 +67,7 @@ const fetchUsers = () => {
         let users = response.data.map((user) => user.id);
         dispatch(fetchUserSuccess(users));
       })
-      .catch((err) => {
+      .catch((error) => {
         //error message
 
         dispatch(fetchUserFailure(error.message));
